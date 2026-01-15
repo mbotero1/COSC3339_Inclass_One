@@ -16,11 +16,10 @@ def calculate_hypotenuse(side_a, side_b):
     result = math.sqrt(side_a**2 + side_b**2)  
     return result
 
-# This method contains a bug. In your commit note, state the bug and how you fixed it
 def count_words(sentence):
     if len(sentence) == 0:
         return 0
-    words = sentence.split(',')  
+    words = sentence.split(' ')  
     return len(words)
 
 
