@@ -11,6 +11,7 @@ branches to simulate merge conflicts.
 """
 
 import math
+import random
 
 def calculate_hypotenuse(side_a, side_b):
     result = math.sqrt(side_a**2 + side_b**2)  
@@ -53,9 +54,18 @@ def calculate_shipping_cost(weight, destination):
     return cost
 
 
-# This method uses funky logic. Rewrite it using different loop structures
 def curve_scores(scores):
-    return list(map(lambda x: min(x + 5, 100), scores))
+    curved_scores = []
+    i = 0
+    while i < scores.len():
+        score = scores[i]
+        curved_score = score + random.randint(1, 10)
+        if curved_score > 100:
+            curved_score = 100
+        curved_scores.append(curved_score)
+        i += 1
+
+    return curved_scores
 
 
 # For scenario three change the name of this method.
