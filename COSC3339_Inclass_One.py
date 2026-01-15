@@ -11,6 +11,7 @@ branches to simulate merge conflicts.
 """
 
 import math
+import random
 
 def calculate_hypotenuse(side_a, side_b):
     result = math.sqrt(side_a**2 + side_b**2)  
